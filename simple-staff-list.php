@@ -174,6 +174,7 @@ function sslp_custom_tax() {
 		'hierarchical' => true,
 		'labels' => $labels, /* NOTICE: Here is where the $labels variable is used */
 		'show_ui' => true,
+		'show_admin_column' => true,
 		'query_var' => true,
 		'rewrite' => array( 'slug' => 'group' ),
 	));
@@ -190,8 +191,7 @@ function sslp_custom_tax() {
 // Change what's hidden by default
 add_filter('default_hidden_meta_boxes', 'hide_meta_lock', 10, 2);
 function hide_meta_lock($hidden, $screen) {
-        if ( $screen->base == 'staff-member' )
-                $hidden = array( 'postexcerpt' );
+        if ( $screen->base == 'staff-member' ) $hidden = array( 'postexcerpt' );
         return $hidden;
 }
 
@@ -279,7 +279,8 @@ function sslp_staff_member_add_meta_boxes() {
  * @return   array             Column titles
  */
  
-add_filter( "manage_staff-member_posts_columns", "sslp_staff_member_custom_columns" );
+add_filter('manage_staff-member_posts_columns', 'sslp_staff_member_custom_columns');  
+
 function sslp_staff_member_custom_columns( $cols ) {
 	$cols = array(
 		'cb'				  =>     '<input type="checkbox" />',
@@ -288,11 +289,10 @@ function sslp_staff_member_custom_columns( $cols ) {
 		'_staff_member_title' => __( 'Position' ),
 		'_staff_member_email' => __( 'Email' ),
 		'_staff_member_phone' => __( 'Phone' ),
-		'_staff_member_bio'   => __( 'Bio' ),
+		'_staff_member_group' => __( 'Groups' ),
 	);
 	return $cols;
 }
-
 
 
 
