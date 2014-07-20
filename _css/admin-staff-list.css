@@ -1,14 +1,9 @@
 #poststuff .stng_admin_wrap h2 {
-	margin:10px 0 0;
+	margin: 1em 0 0;
 }
 
 .sslp_admin_wrap input[type="text"] {
-	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
 	width: 30%;
-}
-
-#wp-_staff_member_bio-wrap .wp-editor-area {
-	font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
 }
 
 #staff-member-info label {
@@ -20,8 +15,8 @@
 
 #staff-member-info label input {
 	position: absolute;
-	left: 60px;
-	top: -0em;
+	left: 120px;
+	top: 0;
 }
 
 .edit-page-staff-member #post-body-content {
@@ -29,7 +24,7 @@
 }
 
 .wrap.sslp-usage {
-	width:50%;
+	/* width:50%; */
 }
 
 .wrap.sslp-template p {
@@ -37,12 +32,13 @@
 }
 
 .sslp-usage table {
-	width: 140%;
+	width: 100%;
 }
 
 .sslp-usage table td {
-	padding:.75em 0;
+	padding: 1em 1em 1em 0;
 	vertical-align: top;
+	border-bottom: 1px solid #ddd;
 }
 
 p.sslp-note {
@@ -52,12 +48,12 @@ p.sslp-note {
 }
 
 ul.sslp-tag-list {
-	margin-left: 3em;
+	margin-left: 0;
 }
 
 ul.sslp-tag-list li {
-	display:inline;
-	padding: .25em 1em;
+	display:inline-block;
+	padding: 1em 1em 1em 0;
 	font-weight: bold;
 }
 
@@ -72,22 +68,27 @@ td.column-order img {
 }
 
 .sslp-template .content {
-	width: 60%;
 	display: none;
 }
 
 .sslp-template pre {
 	background: #eee;
-	padding: 1%;
+	padding: 1em;
 	border-radius: 3px;
-	border: thin solid #ccc;
+	border: 1px solid #ccc;
 	overflow: auto;
 }
 
 .sslp-template .default-css .content pre{
-	height: 250px;
-	overflow: scroll;
+	height: 22em;
+	overflow: auto;
 }
+
+.sslp-template textarea {
+	width: 100%;
+	resize: vertical;
+}
+
 
 
 /*
